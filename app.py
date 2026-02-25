@@ -96,6 +96,9 @@ def get_product_details():
     return jsonify(product_details)
 
 
+    
+
+
 # Mpesa Payment Route 
 import requests
 import datetime
@@ -132,9 +135,9 @@ def mpesa_payment():
             "Password": "{}".format(password),
             "Timestamp": "{}".format(timestamp),
             "TransactionType": "CustomerPayBillOnline",
-            "Amount": amount,  # use 1 when testing
+            "Amount": "1",  # use 1 when testing
             "PartyA": phone,  # change to your number
-            "PartyB": "174379",GI
+            "PartyB": "174379",
             "PhoneNumber": phone,
             "CallBackURL": "https://modcom.co.ke/api/confirmation.php",
             "AccountReference": "account",
